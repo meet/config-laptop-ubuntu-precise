@@ -1,19 +1,17 @@
 #!/bin/bash
 
-# Remove NetworkManager
-dpkg --purge network-manager network-manager-gnome
+# Make an account for the students.
+adduser --disabled-login meet-student
+usermod -p $1$j5yXLcGq$ovbtMtTUaQgjqnCr6wf0// meet-student
 
 # Configuration files
-REPO=config-fatlab-ubuntu-precise
+REPO=config-laptop-ubuntu-precise
 ( cd / \
   && git clone --no-checkout https://github.com/meet/$REPO.git \
   && mv $REPO/.git / \
   && git checkout --force \
   && rm -rf $REPO \
   && git config status.showUntrackedFiles no )
-
-# LDAP authentication
-auth-client-config -t nss -p lac_ldap
 
 # sudo
 chmod 440 /etc/sudoers.d/*
