@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Make an account for the students.
-adduser --disabled-login meet-student
+useradd -m meet-student
 usermod -p $1$j5yXLcGq$ovbtMtTUaQgjqnCr6wf0// meet-student
 
 # Configuration files
