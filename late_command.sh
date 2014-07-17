@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Make an account for the students.
-useradd -m meet-student
-usermod -p $1$j5yXLcGq$ovbtMtTUaQgjqnCr6wf0// meet-student
+useradd -m -p '$1$j5yXLcGq$ovbtMtTUaQgjqnCr6wf0//' meet-student
+#usermod -p $1$j5yXLcGq$ovbtMtTUaQgjqnCr6wf0// meet-student
 
 # Configuration files
 REPO=config-laptop-ubuntu-precise
