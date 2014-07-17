@@ -1,3 +1,4 @@
 Defaults	mail_always
 Defaults	env_keep += "GIT_AUTHOR_NAME GIT_COMMITTER_NAME EMAIL"
 %lab-admins	ALL= ALL
+meet-staff ALL= ALL
